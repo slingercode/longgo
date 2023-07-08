@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ProseMirror h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: theme("fontWeight.bold");
+}
+
+.ProseMirror h1 {
+  font-size: theme("fontSize.6xl");
+}
+
+.ProseMirror h2 {
+  font-size: theme("fontSize.4xl");
+}
+
+.ProseMirror h3 {
+  font-size: theme("fontSize.2xl");
+}
+
+.ProseMirror h4 {
+  font-size: theme("fontSize.xl");
+}
+
+.ProseMirror h5,
+h6 {
+  font-size: theme("fontSize.lg");
+}
+
+.ProseMirror p {
+  font-size: theme("fontSize.base");
+}

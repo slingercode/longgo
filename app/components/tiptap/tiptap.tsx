@@ -8,21 +8,15 @@ export function TipTap() {
     editorProps: {
       attributes: {
         class:
-          "h-full overflow-auto bg-white p-2 focus-visible:outline-none sm:rounded-sm sm:border",
+          "h-full overflow-auto bg-white p-2 focus-visible:outline-none dark:bg-neutral-950 dark:text-white sm:rounded-sm sm:border",
       },
     },
     extensions: [
-      StarterKit.configure({
-        heading: {
-          HTMLAttributes: {
-            class: "",
-          },
-        },
-      }),
+      StarterKit,
       Placeholder.configure({
         placeholder: "What are you thinking?",
         emptyEditorClass:
-          "first:before:pointer-events-none first:before:float-left first:before:h-0 first:before:text-gray-300 first:before:content-[attr(data-placeholder)]",
+          "first:before:pointer-events-none first:before:float-left first:before:h-0 first:before:text-gray-300 first:before:content-[attr(data-placeholder)] dark:first:before:text-gray-400",
       }),
     ],
   });
