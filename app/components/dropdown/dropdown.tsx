@@ -1,4 +1,5 @@
 import { Menu } from "lucide-react";
+import { useTheme } from "next-themes";
 
 import { Button } from "~/components/ui/button";
 import {
@@ -19,6 +20,8 @@ import {
 } from "~/components/ui/select";
 
 export function Dropdown() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -27,13 +30,13 @@ export function Dropdown() {
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent align="end" alignOffset={0} className="w-56">
         <DropdownMenuLabel>Configuration</DropdownMenuLabel>
         <DropdownMenuSeparator />
 
         <DropdownMenuGroup>
           <div className="p-1">
-            <Select>
+            <Select value={theme} onValueChange={(value) => setTheme(value)}>
               <SelectTrigger className="w-full">
                 <SelectValue placeholder="Select a theme" />
               </SelectTrigger>

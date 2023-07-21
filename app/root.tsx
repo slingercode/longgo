@@ -9,6 +9,7 @@ import {
 } from "@remix-run/react";
 
 import { Dropdown } from "~/components/dropdown";
+import { ThemeProvider } from "~/lib/theme-provider";
 
 import stylesheet from "~/global.css";
 
@@ -27,9 +28,14 @@ export default function App() {
       </head>
 
       <body className="dark:bg-neutral-950 dark:text-white">
-        <Dropdown />
+        <ThemeProvider enableSystem attribute="class" defaultTheme="system">
+          <div className="invisible absolute right-0 top-0 m-2 md:visible">
+            <Dropdown />
+          </div>
 
-        <Outlet />
+          <Outlet />
+        </ThemeProvider>
+
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
