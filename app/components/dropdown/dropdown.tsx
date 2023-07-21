@@ -30,7 +30,7 @@ export function Dropdown() {
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="end" alignOffset={0} className="w-56">
+      <DropdownMenuContent align="end" alignOffset={0} className="w-[200px]">
         <DropdownMenuLabel>Configuration</DropdownMenuLabel>
         <DropdownMenuSeparator />
 
