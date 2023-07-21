@@ -8,6 +8,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import { Dropdown } from "~/components/dropdown";
+
 import stylesheet from "~/global.css";
 
 export const links: LinksFunction = () => [
@@ -25,6 +27,8 @@ export default function App() {
       </head>
 
       <body className="dark:bg-neutral-950 dark:text-white">
+        <Dropdown />
+
         <Outlet />
         <ScrollRestoration />
         <Scripts />
