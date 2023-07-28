@@ -13,11 +13,11 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <>
-      <nav className="absolute bottom-0 right-0 z-10 m-5 lg:top-0">
+      <nav className="fixed bottom-0 right-0 z-10 mb-3 mr-3 lg:top-0 lg:mr-5 lg:mt-5">
         <Dropdown />
       </nav>
 
-      <main className="mx-auto h-screen max-w-screen-lg overflow-hidden p-5">
+      <main className="h-[100dvh] p-5 lg:mx-auto lg:max-w-screen-lg">
         <TipTap />
       </main>
     </>
