@@ -8,7 +8,7 @@ export function TipTap() {
     editorProps: {
       attributes: {
         class:
-          "h-full overflow-auto bg-white p-2 focus-visible:outline-none dark:bg-neutral-950 dark:text-white sm:rounded-sm sm:border",
+          "h-full overflow-auto border-neutral-200 bg-white p-2 focus-visible:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white md:rounded-md lg:border",
       },
     },
     extensions: [
@@ -21,10 +21,5 @@ export function TipTap() {
     ],
   });
 
-  return (
-    <EditorContent
-      editor={editor}
-      className="h-full sm:rounded-sm sm:drop-shadow-md"
-    />
-  );
+  return <EditorContent editor={editor} className="h-full lg:drop-shadow-md" />;
 }

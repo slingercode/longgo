@@ -8,6 +8,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import { ThemeProvider } from "~/lib/theme-provider";
+
 import stylesheet from "~/global.css";
 
 export const links: LinksFunction = () => [
@@ -25,7 +27,10 @@ export default function App() {
       </head>
 
       <body className="dark:bg-neutral-950 dark:text-white">
-        <Outlet />
+        <ThemeProvider enableSystem attribute="class" defaultTheme="system">
+          <Outlet />
+        </ThemeProvider>
+
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
